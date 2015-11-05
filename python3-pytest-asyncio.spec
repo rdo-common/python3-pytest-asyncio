@@ -7,7 +7,7 @@
 
 Name:           python3-%{pypi_name}
 Version:        0.1.3
-Release:        2.git%{shortcommit}%{?dist}
+Release:        3.git%{shortcommit}%{?dist}
 Summary:        Pytest support for asyncio
 
 License:        ASL 2.0
@@ -48,7 +48,10 @@ provides useful fixtures and markers to make testing easier.
 
 
 %changelog
-* Sun Aug 2 2015 Julien Enselme <jujens@jujens.eu> 0.1.3-2.git2a4c7e6
+* Thu Nov 5 2015 Julien Enselme <jujens@jujens.eu> - 0.1.3-3.git2a4c7e6
+- Rebuilt for python 3.5
+
+* Sun Aug 2 2015 Julien Enselme <jujens@jujens.eu> - 0.1.3-2.git2a4c7e6
 - Add %%python_provide
 
 * Sat Aug 1 2015 Julien Enselme <jujens@jujens.eu> - 0.1.3-1.git2a4c7e6
