@@ -2,12 +2,12 @@
 %global srcname pytest_asyncio
 %global project_owner pytest-dev
 %global github_name pytest-asyncio
-%global commit 2a4c7e6b108878cf6d8554d96318211f675ba7f7
+%global commit ae9b430a3cd9a78eb14a16f5e82686710028790a
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           python3-%{pypi_name}
-Version:        0.1.3
-Release:        3.git%{shortcommit}%{?dist}
+Version:        0.3.0
+Release:        1.git%{shortcommit}%{?dist}
 Summary:        Pytest support for asyncio
 
 License:        ASL 2.0
@@ -48,6 +48,9 @@ provides useful fixtures and markers to make testing easier.
 
 
 %changelog
+* Sun Dec 20 2015 Julien Enselme <jujens@jujens.eu> - 0.3.0-1.git2a4c7e6
+- Update to 0.3.0 (bz:1293083)
+
 * Thu Nov 5 2015 Julien Enselme <jujens@jujens.eu> - 0.1.3-3.git2a4c7e6
 - Rebuilt for python 3.5
 
