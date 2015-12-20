@@ -48,7 +48,7 @@ provides useful fixtures and markers to make testing easier.
 
 
 %changelog
-* Sun Dec 20 2015 Julien Enselme <jujens@jujens.eu> - 0.3.0-1.git2a4c7e6
+* Sun Dec 20 2015 Julien Enselme <jujens@jujens.eu> - 0.3.0-1.gitae9b430
 - Update to 0.3.0 (bz:1293083)
 
 * Thu Nov 5 2015 Julien Enselme <jujens@jujens.eu> - 0.1.3-3.git2a4c7e6
