@@ -2,12 +2,12 @@
 %global srcname pytest_asyncio
 %global project_owner pytest-dev
 %global github_name pytest-asyncio
-%global commit 72a6c2bf5e15a5e525bfe14d3a6ba14cea325156
+%global commit 2407487a2fd8440a19007a108b0456f7d493c889
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           python3-%{pypi_name}
-Version:        0.6.0
-Release:        2.git%{shortcommit}%{?dist}
+Version:        0.7.0
+Release:        1.git%{shortcommit}%{?dist}
 Summary:        Pytest support for asyncio
 
 License:        ASL 2.0
@@ -48,6 +48,9 @@ provides useful fixtures and markers to make testing easier.
 
 
 %changelog
+* Thu Sep 14 2017 <jujens@jujens.eu> - 0.7.0-1.git2407487
+- Update to 0.7.0
+
 * Thu Jul 27 2017 Fedora Release Engineering <releng@fedoraproject.org> - 0.6.0-2.git72a6c2b
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
 
