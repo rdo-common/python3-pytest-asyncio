@@ -2,11 +2,11 @@
 %global srcname pytest_asyncio
 %global project_owner pytest-dev
 %global github_name pytest-asyncio
-%global commit 2407487a2fd8440a19007a108b0456f7d493c889
+%global commit 18535c3b0c5fe213f13587025737d7984a7eedbd
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           python3-%{pypi_name}
-Version:        0.7.0
+Version:        0.8.0
 Release:        1.git%{shortcommit}%{?dist}
 Summary:        Pytest support for asyncio
 
@@ -48,6 +48,9 @@ provides useful fixtures and markers to make testing easier.
 
 
 %changelog
+* Tue Sep 26 2017 <jujens@jujens.eu> - 0.8.0-1.git18535c3
+- Update to 0.8.0
+
 * Thu Sep 14 2017 <jujens@jujens.eu> - 0.7.0-1.git2407487
 - Update to 0.7.0
 
