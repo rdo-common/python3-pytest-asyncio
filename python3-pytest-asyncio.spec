@@ -2,17 +2,15 @@
 %global srcname pytest_asyncio
 %global project_owner pytest-dev
 %global github_name pytest-asyncio
-%global commit 18535c3b0c5fe213f13587025737d7984a7eedbd
-%global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           python3-%{pypi_name}
-Version:        0.8.0
-Release:        4.git%{shortcommit}%{?dist}
+Version:        0.9.0
+Release:        1%{?dist}
 Summary:        Pytest support for asyncio
 
 License:        ASL 2.0
 URL:            https://pypi.python.org/pypi/%{pypi_name}
-Source0:        https://github.com/%{project_owner}/%{github_name}/archive/%{commit}/%{github_name}-%{commit}.tar.gz
+Source0:        https://github.com/%{project_owner}/%{github_name}/archive/v%{version}/%{github_name}-%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  python3-devel
@@ -29,7 +27,7 @@ provides useful fixtures and markers to make testing easier.
 
 
 %prep
-%setup -qn %{github_name}-%{commit}
+%setup -qn %{github_name}-%{version}
 
 
 %build
@@ -48,6 +46,9 @@ provides useful fixtures and markers to make testing easier.
 
 
 %changelog
+* Wed Aug 01 2018 Julien Enselme <jujens@jujens.eu> - 0.9.0-1
+- Update to 0.9.0
+
 * Sat Jul 14 2018 Fedora Release Engineering <releng@fedoraproject.org> - 0.8.0-4.git18535c3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
