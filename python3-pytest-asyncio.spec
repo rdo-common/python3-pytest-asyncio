@@ -5,7 +5,7 @@
 
 Name:           python3-%{pypi_name}
 Version:        0.9.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Pytest support for asyncio
 
 License:        ASL 2.0
@@ -46,6 +46,9 @@ provides useful fixtures and markers to make testing easier.
 
 
 %changelog
+* Sat Feb 02 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.9.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+
 * Wed Aug 01 2018 Julien Enselme <jujens@jujens.eu> - 0.9.0-1
 - Update to 0.9.0
 
