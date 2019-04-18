@@ -3,6 +3,8 @@
 %global project_owner pytest-dev
 %global github_name pytest-asyncio
 
+%bcond_without  tests
+
 Name:           python3-%{pypi_name}
 Version:        0.10.0
 Release:        1%{?dist}
@@ -14,6 +16,12 @@ Source0:        https://github.com/%{project_owner}/%{github_name}/archive/v%{ve
 
 BuildArch:      noarch
 BuildRequires:  python3-devel
+%if %{with tests}
+BuildRequires:  python3-pytest >= 3.0.6
+BuildRequires:  python3-coverage
+BuildRequires:  python3-async-generator >= 1.3
+BuildRequires:  python3-hypothesis >= 3.64
+%endif
 Requires:       python3-pytest >= 3.0.6
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
@@ -38,6 +46,12 @@ provides useful fixtures and markers to make testing easier.
 %py3_install
 
 
+%if %{with tests}
+%check
+PYTHONPATH=%{buildroot}%{python3_sitelib} pytest-%{python3_version} --verbose
+%endif
+
+
 %files
 %license LICENSE
 %doc README.rst
@@ -48,6 +62,7 @@ provides useful fixtures and markers to make testing easier.
 %changelog
 * Thu Apr 18 2019 Carl George <carl@george.computer> - 0.10.0-1
 - Latest upstream
+- Run test suite
 
 * Sat Feb 02 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.9.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
