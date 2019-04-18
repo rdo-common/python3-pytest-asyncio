@@ -4,8 +4,8 @@
 %global github_name pytest-asyncio
 
 Name:           python3-%{pypi_name}
-Version:        0.9.0
-Release:        2%{?dist}
+Version:        0.10.0
+Release:        1%{?dist}
 Summary:        Pytest support for asyncio
 
 License:        ASL 2.0
@@ -14,7 +14,7 @@ Source0:        https://github.com/%{project_owner}/%{github_name}/archive/v%{ve
 
 BuildArch:      noarch
 BuildRequires:  python3-devel
-Requires:       python3-pytest
+Requires:       python3-pytest >= 3.0.6
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
 %description
@@ -46,6 +46,9 @@ provides useful fixtures and markers to make testing easier.
 
 
 %changelog
+* Thu Apr 18 2019 Carl George <carl@george.computer> - 0.10.0-1
+- Latest upstream
+
 * Sat Feb 02 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.9.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
 
