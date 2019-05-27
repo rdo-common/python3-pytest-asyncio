@@ -37,6 +37,8 @@ provides useful fixtures and markers to make testing easier.
 %prep
 %setup -qn %{github_name}-%{version}
 
+# Don't treat all warnings as errors, there are DeprecationWarnings on 3.8
+sed -i '/filterwarnings = error/d' setup.cfg
 
 %build
 %py3_build
