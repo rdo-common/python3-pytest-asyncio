@@ -7,7 +7,7 @@
 
 Name:           python3-%{pypi_name}
 Version:        0.10.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Pytest support for asyncio
 
 License:        ASL 2.0
@@ -62,6 +62,9 @@ PYTHONPATH=%{buildroot}%{python3_sitelib} pytest-%{python3_version} --verbose
 
 
 %changelog
+* Fri Jul 26 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.10.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
+
 * Thu Apr 18 2019 Carl George <carl@george.computer> - 0.10.0-1
 - Latest upstream
 - Run test suite
