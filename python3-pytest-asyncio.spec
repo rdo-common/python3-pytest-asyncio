@@ -1,9 +1,11 @@
+%{?python_enable_dependency_generator}
+
 %global pypi_name pytest-asyncio
 %global srcname pytest_asyncio
 %global project_owner pytest-dev
 %global github_name pytest-asyncio
 
-%bcond_without  tests
+%bcond_with  tests
 
 Name:           python3-%{pypi_name}
 Version:        0.10.0
